@@ -40,6 +40,10 @@ export class AppComponent implements OnInit, OnDestroy{
     this.getJoke();
   }
 
+  openAPIDoc() {
+    window.open('https://documenter.getpostman.com/view/16443297/TzkyLee7', '_blank');
+  }
+
   ngOnDestroy() {
     this.jokeSub$.unsubscribe();
   }
