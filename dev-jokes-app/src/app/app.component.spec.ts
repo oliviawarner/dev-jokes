@@ -50,4 +50,15 @@ describe('AppComponent', () => {
     expect(app.jokeSub$).not.toBeNull();
   });
 
+  it('#getJoke should be defined', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.getJoke).toBeDefined();
+  });
+
+  it('#nextJoke should be defined', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.nextJoke).toBeDefined();
+  });
 });
