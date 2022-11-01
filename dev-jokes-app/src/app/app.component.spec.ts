@@ -19,4 +19,35 @@ describe('AppComponent', () => {
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
   });
+
+  it('joke arr should not be null', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.joke).not.toBeNull();
+  });
+
+  it('question should not be null', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.question).not.toBeNull();
+  });
+
+  it('punchline should not be null', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.punchline).not.toBeNull();
+  });
+
+  it('joke subscription should be defined', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.jokeSub$).toBeDefined();
+  });
+
+  it('joke subscription should not be null', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.jokeSub$).not.toBeNull();
+  });
+
 });
