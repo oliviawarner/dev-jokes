@@ -19,7 +19,7 @@ export class AppComponent implements OnInit, OnDestroy{
   question:string="";
   punchline:string="";
 
-  ngOnInit() {
+  getJoke() {
     this.jokeSub$ = this.devJokesService.getDevJoke().subscribe(
       (data) => {
         this.joke = data;
@@ -30,6 +30,14 @@ export class AppComponent implements OnInit, OnDestroy{
         console.log(error);
       }
     );
+  }
+
+  ngOnInit() {
+    this.getJoke();
+  }
+
+  nextJoke(event:Event) {
+    this.getJoke();
   }
 
   ngOnDestroy() {
