@@ -61,4 +61,11 @@ describe('AppComponent', () => {
     const app = fixture.componentInstance;
     expect(app.nextJoke).toBeDefined();
   });
+
+  it('apiDocPath should equal https://documenter.getpostman.com/view/16443297/TzkyLee7 path', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.apiDocPath).toEqual("https://documenter.getpostman.com/view/16443297/TzkyLee7");
+  });
+
 });

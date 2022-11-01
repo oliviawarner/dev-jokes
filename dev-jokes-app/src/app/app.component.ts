@@ -18,6 +18,8 @@ export class AppComponent implements OnInit, OnDestroy{
   joke:any= [];
   question:string="";
   punchline:string="";
+  apiDocPath = "https://documenter.getpostman.com/view/16443297/TzkyLee7";
+
 
   getJoke() {
     this.jokeSub$ = this.devJokesService.getDevJoke().subscribe(
@@ -41,7 +43,7 @@ export class AppComponent implements OnInit, OnDestroy{
   }
 
   openAPIDoc() {
-    window.open('https://documenter.getpostman.com/view/16443297/TzkyLee7', '_blank');
+    window.open(this.apiDocPath,'_blank');
   }
 
   ngOnDestroy() {
