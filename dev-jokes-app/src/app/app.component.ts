@@ -36,7 +36,7 @@ export class AppComponent implements OnInit, OnDestroy{
     this.getJoke();
   }
 
-  nextJoke(event:Event) {
+  nextJoke() {
     this.getJoke();
   }
 
