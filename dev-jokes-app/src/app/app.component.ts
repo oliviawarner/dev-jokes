@@ -31,7 +31,9 @@ export class AppComponent implements OnInit, OnDestroy{
       }
     );
   }
+
   ngOnDestroy() {
     this.jokeSub$.unsubscribe();
   }
+
 }
