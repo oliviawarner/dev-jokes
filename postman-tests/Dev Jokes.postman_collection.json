@@ -65,6 +65,129 @@
 				"description": "Gets random joke and punchline"
 			},
 			"response": []
+		},
+		{
+			"name": "PostDevJoke",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"\",\r\n    \"twitter\": \"\",\r\n    \"question\": \"What's the object-oriented way to become wealthy?\",\r\n    \"punchline\": \"Inheritance\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://backend-omega-seven.vercel.app/api/addjoke",
+					"protocol": "https",
+					"host": [
+						"backend-omega-seven",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"addjoke"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "PostDevJoke - Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"\",\r\n    \"twitter\": \"\",\r\n    \"question\": \"What's the object-oriented way to become wealthy?\",\r\n    \"punchline\": \"Inheritance\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://backend-omega-seven.vercel.app/api/addjoke",
+							"protocol": "https",
+							"host": [
+								"backend-omega-seven",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"api",
+								"addjoke"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET,OPTIONS,PATCH,DELETE,POST,PUT"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "public, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Content-Length",
+							"value": "23"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 01 Nov 2022 19:57:17 GMT"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"17-saGrKX28pCEhaVPH1n8k9vk6CBA\""
+						},
+						{
+							"key": "Server",
+							"value": "Vercel"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=63072000; includeSubDomains; preload"
+						},
+						{
+							"key": "X-Vercel-Cache",
+							"value": "MISS"
+						},
+						{
+							"key": "X-Vercel-Id",
+							"value": "iad1::iad1::nhcgp-1667332636721-760f4e23927a"
+						}
+					],
+					"cookie": [],
+					"body": "{status:'Joke created'}"
+				}
+			]
 		}
 	]
 }
