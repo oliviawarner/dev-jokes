@@ -23,7 +23,7 @@ export class AppComponent {
         this.question = this.joke[0].question;
         this.punchline = this.joke[0].punchline;
       },
-      error => {
+      (error) => {
         console.log(error);
       }
     );
