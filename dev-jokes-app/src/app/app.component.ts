@@ -12,8 +12,21 @@ export class AppComponent {
     private devJokesService:DevJokesService
   ) {}
 
+  joke:any= [];
+  question:string="";
+  punchline:string="";
+
   ngOnInit() {
-    this.devJokesService.getDevJoke();
+    this.devJokesService.getDevJoke().subscribe(
+      (data) => {
+        this.joke = data;
+        this.question = this.joke[0].question;
+        this.punchline = this.joke[0].punchline;
+      },
+      error => {
+        console.log(error);
+      }
+    );
   }
 
 }
