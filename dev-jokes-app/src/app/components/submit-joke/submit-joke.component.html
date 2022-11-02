@@ -1,7 +1,7 @@
 <!--Toolbar-->
 <mat-toolbar id="header">
   <!--Submit New Joke Button-->
-  <button mat-raised-button id="back_to_view" title="Back to View Joke">Back</button>
+  <button mat-raised-button id="back_to_view" title="Back to View Jokes">Back</button>
   <span class="spacer"></span>
   Submit a Joke
 </mat-toolbar>
@@ -13,7 +13,7 @@
     <!--Name-->
     <mat-form-field appearance="fill" id="name">
       <mat-label>Name</mat-label>
-      <input matInput placeholder="Ex..Jane Doe">
+      <input matInput placeholder="Ex..Jane Doe" title="Name">
     </mat-form-field>
   </mat-grid-tile>
   </mat-grid-list>
@@ -23,7 +23,7 @@
     <!--Joke-->
     <mat-form-field appearance="fill" id="joke">
       <mat-label>Joke <span class="required">*</span></mat-label>
-      <textarea matInput placeholder="Ex...Why did the programmer quit their job?"></textarea>
+      <textarea matInput placeholder="Ex...Why did the programmer quit their job?" title="Joke"></textarea>
       <mat-hint>Required</mat-hint>
     </mat-form-field>
   </mat-grid-tile>
@@ -34,7 +34,7 @@
     <!--Punchline-->
     <mat-form-field appearance="fill" id="punchline">
       <mat-label>Punchline <span class="required">*</span></mat-label>
-      <textarea matInput placeholder="Ex...Because they didn't get arrays"></textarea>
+      <textarea matInput placeholder="Ex...Because they didn't get arrays" title="Punchline"></textarea>
       <mat-hint>Required</mat-hint>
     </mat-form-field>
   </mat-grid-tile>
