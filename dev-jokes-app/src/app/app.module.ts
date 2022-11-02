@@ -8,10 +8,15 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import { HttpClientModule } from '@angular/common/http';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { ViewJokeComponent } from './components/view-joke/view-joke.component';
+import { AppRoutingModule } from './app-routing.module';
+import { SubmitJokeComponent } from './components/submit-joke/submit-joke.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ViewJokeComponent,
+    SubmitJokeComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +25,8 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
     MatButtonModule,
     MatCardModule,
     HttpClientModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
