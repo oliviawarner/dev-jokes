@@ -9,10 +9,13 @@
 <div id="joke_card_container">
   <!--Joke Card-->
   <mat-card id="joke_card">
+    <!--Progress Bar-->
     <div id="progress_bar_container">
       <mat-progress-bar mode="indeterminate" id="progress_bar" *ngIf="showProgressBar"></mat-progress-bar>
     </div>
+    <!--Question-->
     <mat-card-title id="question">{{this.question}}</mat-card-title>
+    <!--Punchline-->
     <mat-card-subtitle id="punchline">{{this.punchline}}</mat-card-subtitle>
   </mat-card>
 </div>
