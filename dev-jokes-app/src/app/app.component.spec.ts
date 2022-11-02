@@ -68,4 +68,10 @@ describe('AppComponent', () => {
     expect(app.apiDocPath).toEqual("https://documenter.getpostman.com/view/16443297/TzkyLee7");
   });
 
+  it('progress bar should be initialized to false', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.showProgressBar).toBeFalse();
+  });
+
 });
