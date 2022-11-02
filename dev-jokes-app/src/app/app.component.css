@@ -45,6 +45,10 @@ mat-card::ng-deep.mat-card-header-text {
   color:black;
 }
 
+#progress_bar_container {
+  padding-bottom: 10px;
+}
+
 #api_doc {
   background-color:#EE8F20;
 }
