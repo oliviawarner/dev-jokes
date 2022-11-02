@@ -11,12 +11,14 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { ViewJokeComponent } from './components/view-joke/view-joke.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SubmitJokeComponent } from './components/submit-joke/submit-joke.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ViewJokeComponent,
-    SubmitJokeComponent
+    SubmitJokeComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

@@ -18,7 +18,7 @@ export class ViewJokeComponent implements OnInit, OnDestroy {
   joke:any= [];
   question:string="";
   punchline:string="";
-  apiDocPath = "https://documenter.getpostman.com/view/16443297/TzkyLee7";
+
   showProgressBar:boolean=false;
 
 
@@ -43,10 +43,6 @@ export class ViewJokeComponent implements OnInit, OnDestroy {
 
   nextJoke() {
     this.getJoke();
-  }
-
-  openAPIDoc() {
-    window.open(this.apiDocPath,'_blank');
   }
 
   ngOnDestroy() {

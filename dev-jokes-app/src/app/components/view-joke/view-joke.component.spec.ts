@@ -69,12 +69,6 @@ describe('ViewJokeComponent', () => {
     expect(app.nextJoke).toBeDefined();
   });
 
-  it('apiDocPath should equal https://documenter.getpostman.com/view/16443297/TzkyLee7 path', () => {
-    const fixture = TestBed.createComponent(ViewJokeComponent);
-    const app = fixture.componentInstance;
-    expect(app.apiDocPath).toEqual("https://documenter.getpostman.com/view/16443297/TzkyLee7");
-  });
-
   it('progress bar should be initialized to false', () => {
     const fixture = TestBed.createComponent(ViewJokeComponent);
     const app = fixture.componentInstance;

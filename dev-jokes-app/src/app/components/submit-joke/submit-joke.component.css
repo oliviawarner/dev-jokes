@@ -1,0 +1,12 @@
+#header {
+  background-color:#541388;
+}
+
+#back_to_view {
+  background-color:lightgray;
+  color:black;
+}
+
+.spacer {
+  flex: 0.45 0.45 auto;
+}

@@ -49,11 +49,4 @@ mat-card::ng-deep.mat-card-header-text {
   padding-bottom: 10px;
 }
 
-#api_doc {
-  background-color:#EE8F20;
-}
 
-#footer {
-  position:fixed;
-  bottom:0;
-}
