@@ -3,7 +3,7 @@
   Dev Jokes
   <span class="spacer"></span>
   <!--Submit New Joke Button-->
-  <button mat-raised-button id="submit_new_joke">Submit New Joke</button>
+  <button mat-raised-button id="submit_new_joke" title="Submit New Joke">Submit New Joke</button>
 </mat-toolbar>
 
 <div id="joke_card_container">
@@ -16,10 +16,10 @@
 
 <div id="next_joke_btn_container">
   <!--Next Joke Button-->
-  <button mat-raised-button id="next_joke" (click)="nextJoke()">Next Joke</button>
+  <button mat-raised-button id="next_joke" (click)="nextJoke()" title="Next Joke">Next Joke</button>
 </div>
 
 <mat-toolbar id="footer">
   <!--API Doc Button-->
-  <button mat-raised-button id="api_doc" (click)="openAPIDoc()">API Doc</button>
+  <button mat-raised-button id="api_doc" (click)="openAPIDoc()" title="API Doc">API Doc</button>
 </mat-toolbar>
