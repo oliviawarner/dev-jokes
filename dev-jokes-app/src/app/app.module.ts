@@ -12,6 +12,9 @@ import { ViewJokeComponent } from './components/view-joke/view-joke.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SubmitJokeComponent } from './components/submit-joke/submit-joke.component';
 import { FooterComponent } from './components/footer/footer.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { FooterComponent } from './components/footer/footer.component';
     MatCardModule,
     HttpClientModule,
     MatProgressBarModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

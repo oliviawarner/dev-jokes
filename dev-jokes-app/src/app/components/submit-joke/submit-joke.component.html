@@ -6,5 +6,45 @@
   Submit a Joke
 </mat-toolbar>
 
+
+<div id="submit_joke_form_container">
+<mat-grid-list cols="1" rowHeight="100px">
+  <mat-grid-tile>
+    <!--Name-->
+    <mat-form-field appearance="fill" id="name">
+      <mat-label>Name</mat-label>
+      <input matInput>
+    </mat-form-field>
+  </mat-grid-tile>
+  </mat-grid-list>
+
+<mat-grid-list cols="1" rowHeight="100px">
+  <mat-grid-tile>
+    <!--Joke-->
+    <mat-form-field appearance="fill" id="joke">
+      <mat-label>Joke <span class="required">*</span></mat-label>
+      <textarea matInput></textarea>
+      <mat-hint>Required</mat-hint>
+    </mat-form-field>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<mat-grid-list cols="1" rowHeight="100px">
+  <mat-grid-tile>
+    <!--Punchline-->
+    <mat-form-field appearance="fill" id="punchline">
+      <mat-label>Punchline <span class="required">*</span></mat-label>
+      <textarea matInput></textarea>
+      <mat-hint>Required</mat-hint>
+    </mat-form-field>
+  </mat-grid-tile>
+</mat-grid-list>
+</div>
+
+<div id="submit_joke_btn_container">
+  <!--Submit Joke Button-->
+  <button mat-raised-button id="submit_joke" title="Submit Joke">Submit Joke</button>
+</div>
+
 <!--Footer-->
 <app-footer></app-footer>
