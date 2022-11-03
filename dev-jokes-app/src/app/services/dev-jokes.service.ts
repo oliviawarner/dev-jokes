@@ -19,8 +19,6 @@ export class DevJokesService {
     .subscribe((res) => {
       let response = JSON.stringify(res);
       let responseObj = JSON.parse(response);
-      console.log(response);
-      console.log(responseObj);
       if(responseObj == "{status:'Joke created'}") {
         console.log('joke created')
       }
