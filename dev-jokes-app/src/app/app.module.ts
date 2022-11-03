@@ -18,6 +18,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatRippleModule} from '@angular/material/core';
+import {MatIcon, MatIconModule} from '@angular/material/icon'
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import {MatRippleModule} from '@angular/material/core';
     MatGridListModule,
     ReactiveFormsModule,
     MatSnackBarModule,
-    MatRippleModule
+    MatRippleModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

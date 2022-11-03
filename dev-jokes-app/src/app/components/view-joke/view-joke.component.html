@@ -3,7 +3,7 @@
   Dev Jokes
   <span class="spacer"></span>
   <!--Submit New Joke Button-->
-  <a routerLink="submit-joke"><button matRipple mat-raised-button id="submit_new_joke" title="Submit New Joke">Submit New Joke</button></a>
+  <a routerLink="submit-joke"><button matRipple mat-raised-button id="submit_new_joke" title="Submit New Joke"><mat-icon>add</mat-icon>Submit New Joke</button></a>
 </mat-toolbar>
 
 <div id="joke_card_container">
@@ -22,7 +22,7 @@
 
 <div id="next_joke_btn_container">
   <!--Next Joke Button-->
-  <button mat-raised-button id="next_joke" (click)="nextJoke()" matRipple title="Next Joke">Next Joke</button>
+  <button mat-raised-button id="next_joke" (click)="nextJoke()" matRipple title="Next Joke">Next Joke <mat-icon>refresh</mat-icon></button>
 </div>
 
 <!--Footer-->
