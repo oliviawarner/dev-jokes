@@ -29,7 +29,7 @@ describe('SubmitJokeComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('initial form values should equal group', () => {
+  it('initial form values should be initialized to empty', () => {
     const jokeFormGroup = component.jokeForm;
     const jokeFormValues = {
       name: '',
