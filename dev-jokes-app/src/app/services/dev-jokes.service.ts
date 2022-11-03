@@ -12,4 +12,8 @@ export class DevJokesService {
     const getDevJokePath = `https://backend-omega-seven.vercel.app/api/getjoke`;
     return this.http.get(getDevJokePath);
   }
+
+  submitDevJoke() {
+    const postDevJokePath=`https://backend-omega-seven.vercel.app/api/addjoke`;
+  }
 }

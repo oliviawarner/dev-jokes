@@ -14,16 +14,14 @@ export class SubmitJokeComponent implements OnInit {
   ngOnInit(): void {
     this.jokeForm = this.fb.group({
       name:[''],
-      joke:['', Validators.required],
+      twitter:[''],
+      question:['', Validators.required],
       punchline:['', Validators.required]
     });
   }
 
   submitJoke(jokeForm:FormGroup) {
-    alert('Valid? ' + jokeForm.valid);
-    alert('Name: ' + jokeForm.value.name);
-    alert('Joke: ' + jokeForm.value.joke);
-    alert('Punchline: ' + jokeForm.value.punchline);
+    let formResult = JSON.stringify(this.jokeForm.value);
+    console.log(formResult);
   }
-
 }
