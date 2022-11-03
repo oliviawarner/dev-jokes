@@ -1,8 +1,10 @@
-#api_doc {
-  background-color:#EE8F20;
-}
-
 #footer {
   position:fixed;
   bottom:0;
+}
+
+#postman_logo {
+  height:25px;
+  width:25px;
+  padding-right:5px;
 }

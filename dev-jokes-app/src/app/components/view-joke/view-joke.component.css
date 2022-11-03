@@ -6,6 +6,10 @@
   background-color:#541388;
 }
 
+#add_icon {
+  padding-right:3px;
+}
+
 #submit_new_joke {
   background-color:#71b340;
 }

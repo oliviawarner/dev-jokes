@@ -7,6 +7,14 @@
   color:black;
 }
 
+#back_icon {
+  padding-right: 3px;
+}
+
+#check_icon {
+  padding-right:3px;
+}
+
 .spacer {
   flex: 0.45 0.45 auto;
 }

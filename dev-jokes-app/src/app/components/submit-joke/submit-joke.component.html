@@ -1,7 +1,7 @@
 <!--Toolbar-->
 <mat-toolbar id="header">
   <!--Submit New Joke Button-->
-  <a routerLink=""><button mat-raised-button matRipple id="back_to_view" title="Back to View Jokes"><mat-icon>arrow_back</mat-icon>Back</button></a>
+  <a routerLink=""><button mat-raised-button matRipple id="back_to_view" title="Back to View Jokes"><mat-icon id="back_icon">arrow_back</mat-icon>Back</button></a>
   <span class="spacer"></span>
   Submit a Joke
 </mat-toolbar>
@@ -46,7 +46,7 @@
 
 <div id="submit_joke_btn_container">
   <!--Submit Joke Button-->
-  <button mat-raised-button matRipple id="submit_joke" title="Submit Joke" type="submit" [disabled]="jokeForm.invalid">	<mat-icon>check</mat-icon>Submit Joke</button>
+  <button mat-raised-button matRipple id="submit_joke" title="Submit Joke" type="submit" [disabled]="jokeForm.invalid">	<mat-icon id="check_icon">check</mat-icon>Submit Joke</button>
 </div>
 </form>
 
