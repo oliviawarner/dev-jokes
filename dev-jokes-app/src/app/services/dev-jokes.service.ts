@@ -18,7 +18,18 @@ export class DevJokesService {
     return this.http.post(postDevJokePath,jokeFormResult, {responseType: 'text'})
     .subscribe((res) => {
       let response = JSON.stringify(res);
+      let responseObj = JSON.parse(response);
       console.log(response);
+      console.log(responseObj);
+      if(responseObj == "{status:'Joke created'}") {
+        console.log('joke created')
+      }
+      else {
+        alert('error occured');
+      }
+    },
+    error => {
+      console.log(error);
     });
   }
 }
