@@ -41,7 +41,7 @@ export class ViewJokeComponent implements OnInit, OnDestroy {
     this.getJoke();
   }
 
-  nextJoke() {
+  newJoke() {
     this.getJoke();
   }
 

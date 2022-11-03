@@ -35,12 +35,12 @@ mat-card::ng-deep.mat-card-header-text {
   line-height:1.3;
 }
 
-#next_joke_btn_container {
+#new_joke_btn_container {
   text-align:center;
   padding-top:20px;
 }
 
-#next_joke {
+#new_joke {
   background-color:#FFD400;
   color:black;
 }

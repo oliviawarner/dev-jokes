@@ -63,10 +63,10 @@ describe('ViewJokeComponent', () => {
     expect(app.getJoke).toBeDefined();
   });
 
-  it('#nextJoke should be defined', () => {
+  it('#newJoke should be defined', () => {
     const fixture = TestBed.createComponent(ViewJokeComponent);
     const app = fixture.componentInstance;
-    expect(app.nextJoke).toBeDefined();
+    expect(app.newJoke).toBeDefined();
   });
 
   it('progress bar should be initialized to false', () => {
