@@ -6,14 +6,14 @@
   Submit a Joke
 </mat-toolbar>
 
-
+<form [formGroup]="jokeForm" (ngSubmit)="submitJoke(jokeForm)">
 <div id="submit_joke_form_container">
 <mat-grid-list cols="1" rowHeight="100px">
   <mat-grid-tile>
     <!--Name-->
     <mat-form-field appearance="fill" id="name">
       <mat-label>Name</mat-label>
-      <input matInput placeholder="Ex..Jane Doe" title="Name">
+      <input matInput placeholder="Ex..Jane Doe" title="Name" formControlName="name">
     </mat-form-field>
   </mat-grid-tile>
   </mat-grid-list>
@@ -23,7 +23,7 @@
     <!--Joke-->
     <mat-form-field appearance="fill" id="joke">
       <mat-label>Joke <span class="required">*</span></mat-label>
-      <textarea matInput placeholder="Ex...Why did the programmer quit their job?" title="Joke"></textarea>
+      <textarea matInput placeholder="Ex...Why did the programmer quit their job?" title="Joke" formControlName="joke"></textarea>
       <mat-hint>Required</mat-hint>
     </mat-form-field>
   </mat-grid-tile>
@@ -34,7 +34,7 @@
     <!--Punchline-->
     <mat-form-field appearance="fill" id="punchline">
       <mat-label>Punchline <span class="required">*</span></mat-label>
-      <textarea matInput placeholder="Ex...Because they didn't get arrays" title="Punchline"></textarea>
+      <textarea matInput placeholder="Ex...Because they didn't get arrays" title="Punchline" formControlName="punchline"></textarea>
       <mat-hint>Required</mat-hint>
     </mat-form-field>
   </mat-grid-tile>
@@ -43,8 +43,9 @@
 
 <div id="submit_joke_btn_container">
   <!--Submit Joke Button-->
-  <button mat-raised-button id="submit_joke" title="Submit Joke">Submit Joke</button>
+  <button mat-raised-button id="submit_joke" title="Submit Joke" type="submit">Submit Joke</button>
 </div>
+</form>
 
 <!--Footer-->
 <app-footer></app-footer>
