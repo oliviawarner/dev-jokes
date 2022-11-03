@@ -13,7 +13,12 @@ export class DevJokesService {
     return this.http.get(getDevJokePath);
   }
 
-  submitDevJoke() {
+  submitDevJoke(jokeFormResult:Object) {
     const postDevJokePath=`https://backend-omega-seven.vercel.app/api/addjoke`;
+    return this.http.post(postDevJokePath,jokeFormResult, {responseType: 'text'})
+    .subscribe((res) => {
+      let response = JSON.stringify(res);
+      console.log(response);
+    });
   }
 }
