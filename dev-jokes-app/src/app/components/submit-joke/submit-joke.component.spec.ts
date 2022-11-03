@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { SubmitJokeComponent } from './submit-joke.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 describe('SubmitJokeComponent', () => {
   let component: SubmitJokeComponent;
@@ -12,7 +13,8 @@ describe('SubmitJokeComponent', () => {
       imports:[
         FormsModule,
         ReactiveFormsModule,
-        HttpClientTestingModule
+        HttpClientTestingModule,
+        MatSnackBarModule
       ],
       declarations: [ SubmitJokeComponent ]
     })
