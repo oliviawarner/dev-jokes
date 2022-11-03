@@ -12,4 +12,22 @@ export class DevJokesService {
     const getDevJokePath = `https://backend-omega-seven.vercel.app/api/getjoke`;
     return this.http.get(getDevJokePath);
   }
+
+  submitDevJoke(jokeFormResult:Object) {
+    const postDevJokePath=`https://backend-omega-seven.vercel.app/api/addjoke`;
+    return this.http.post(postDevJokePath,jokeFormResult, {responseType: 'text'})
+    .subscribe((res) => {
+      let response = JSON.stringify(res);
+      let responseObj = JSON.parse(response);
+      if(responseObj == "{status:'Joke created'}") {
+        console.log('joke created')
+      }
+      else {
+        alert('error occured');
+      }
+    },
+    error => {
+      console.log(error);
+    });
+  }
 }
