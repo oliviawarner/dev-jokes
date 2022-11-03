@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DevJokesService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private _snackBar: MatSnackBar) { }
 
   getDevJoke() {
     const getDevJokePath = `https://backend-omega-seven.vercel.app/api/getjoke`;
@@ -20,14 +21,20 @@ export class DevJokesService {
       let response = JSON.stringify(res);
       let responseObj = JSON.parse(response);
       if(responseObj == "{status:'Joke created'}") {
-        console.log('joke created')
+        this._snackBar.open('Joke has been submitted', 'Close', {
+          duration:5000
+        });
       }
       else {
-        alert('error occured');
+        this._snackBar.open('Error has occured. Please try again.', 'Close', {
+          duration:5000
+        });
       }
     },
     error => {
-      console.log(error);
+      this._snackBar.open('Error has occured. Please try again.', 'Close', {
+        duration:5000
+      });
     });
   }
 }
