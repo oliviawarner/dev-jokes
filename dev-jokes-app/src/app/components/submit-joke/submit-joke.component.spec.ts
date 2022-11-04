@@ -63,4 +63,9 @@ describe('SubmitJokeComponent', () => {
     expect(submitBtn.attributes.disabled).toBeTruthy();
   });
 
+  it('spinner should be hidden on service call', () => {
+    const spinner = fixture.debugElement.nativeElement.querySelector('#spinner_container');
+    expect(spinner.style.display).toEqual('');
+  });
+
 });
