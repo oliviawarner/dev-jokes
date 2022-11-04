@@ -6,6 +6,10 @@
   Submit a Joke
 </mat-toolbar>
 
+<div id="spinner_container">
+  <mat-spinner id="spinner" mode="indeterminate" diameter="50"></mat-spinner>
+</div>
+
 <form [formGroup]="jokeForm" (ngSubmit)="submitJoke(jokeForm)" id="jokeForm">
 <div id="submit_joke_form_container">
 <mat-grid-list cols="1" rowHeight="100px">

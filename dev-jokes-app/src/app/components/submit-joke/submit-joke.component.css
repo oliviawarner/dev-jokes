@@ -35,6 +35,15 @@
   width:50%;
 }
 
+#spinner_container {
+  padding-top:50px;
+  display:none;
+}
+
+#spinner {
+  margin:0 auto;
+}
+
 ::ng-deep .mat-focused .mat-form-field-label {
   /*change color of label*/
   color: #71b340!important;
