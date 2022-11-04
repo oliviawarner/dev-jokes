@@ -11,47 +11,47 @@
 </div>
 
 <form [formGroup]="jokeForm" (ngSubmit)="submitJoke(jokeForm)" id="jokeForm">
-<div id="submit_joke_form_container">
-<mat-grid-list cols="1" rowHeight="100px">
-  <mat-grid-tile>
-    <!--Name-->
-    <mat-form-field appearance="fill" id="name">
-      <mat-label>Name</mat-label>
-      <input matInput placeholder="Ex...Jane Doe" title="Name" formControlName="name">
-    </mat-form-field>
-  </mat-grid-tile>
+  <div id="submit_joke_form_container">
+  <mat-grid-list cols="1" rowHeight="100px">
+    <mat-grid-tile>
+      <!--Name-->
+      <mat-form-field appearance="fill" id="name">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Ex...Jane Doe" title="Name" formControlName="name">
+      </mat-form-field>
+    </mat-grid-tile>
+    </mat-grid-list>
+
+    <!--Hidden, value always empty. did not want to include in app but is required for api body post request-->
+  <input matInput formControlName="twitter" [hidden]="true">
+
+  <mat-grid-list cols="1" rowHeight="100px">
+    <mat-grid-tile>
+      <!--Joke/Question-->
+      <mat-form-field appearance="fill" id="joke">
+        <mat-label>Joke <span class="required">*</span></mat-label>
+        <textarea matInput placeholder="Ex...Why did the programmer quit their job?" title="Joke" formControlName="question"></textarea>
+        <mat-hint *ngIf="jokeForm.get('question')?.hasError('required')">Joke is required</mat-hint>
+      </mat-form-field>
+    </mat-grid-tile>
   </mat-grid-list>
 
-  <!--Hidden, value always empty. did not want to include in app but is required for api body post request-->
-<input matInput formControlName="twitter" [hidden]="true">
+  <mat-grid-list cols="1" rowHeight="100px">
+    <mat-grid-tile>
+      <!--Punchline-->
+      <mat-form-field appearance="fill" id="punchline">
+        <mat-label>Punchline <span class="required">*</span></mat-label>
+        <textarea matInput placeholder="Ex...Because they didn't get arrays" title="Punchline" formControlName="punchline"></textarea>
+        <mat-hint *ngIf="jokeForm.get('punchline')?.hasError('required')">Punchline is required</mat-hint>
+      </mat-form-field>
+    </mat-grid-tile>
+  </mat-grid-list>
+  </div>
 
-<mat-grid-list cols="1" rowHeight="100px">
-  <mat-grid-tile>
-    <!--Joke-->
-    <mat-form-field appearance="fill" id="joke">
-      <mat-label>Joke <span class="required">*</span></mat-label>
-      <textarea matInput placeholder="Ex...Why did the programmer quit their job?" title="Joke" formControlName="question"></textarea>
-      <mat-hint *ngIf="jokeForm.get('question')?.hasError('required')">Joke is required</mat-hint>
-    </mat-form-field>
-  </mat-grid-tile>
-</mat-grid-list>
-
-<mat-grid-list cols="1" rowHeight="100px">
-  <mat-grid-tile>
-    <!--Punchline-->
-    <mat-form-field appearance="fill" id="punchline">
-      <mat-label>Punchline <span class="required">*</span></mat-label>
-      <textarea matInput placeholder="Ex...Because they didn't get arrays" title="Punchline" formControlName="punchline"></textarea>
-      <mat-hint *ngIf="jokeForm.get('punchline')?.hasError('required')">Punchline is required</mat-hint>
-    </mat-form-field>
-  </mat-grid-tile>
-</mat-grid-list>
-</div>
-
-<div id="submit_joke_btn_container">
-  <!--Submit Joke Button-->
-  <button mat-raised-button matRipple id="submit_joke" title="Submit Joke" type="submit" [disabled]="jokeForm.invalid">	<mat-icon id="check_icon">check</mat-icon>Submit Joke</button>
-</div>
+  <div id="submit_joke_btn_container">
+    <!--Submit Joke Button-->
+    <button mat-raised-button matRipple id="submit_joke" title="Submit Joke" type="submit" [disabled]="jokeForm.invalid">	<mat-icon id="check_icon">check</mat-icon>Submit Joke</button>
+  </div>
 </form>
 
 <!--Footer-->

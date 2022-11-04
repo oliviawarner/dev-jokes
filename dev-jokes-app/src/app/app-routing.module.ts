@@ -6,7 +6,7 @@ import { SubmitJokeComponent } from './components/submit-joke/submit-joke.compon
 
 const routes: Routes = [
   { path: '', component: ViewJokeComponent },
-  {path:'submit-joke', component:SubmitJokeComponent}
+  { path: 'submit-joke', component: SubmitJokeComponent }
 ];
 
 @NgModule({
