@@ -18,7 +18,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatRippleModule} from '@angular/material/core';
-import {MatIcon, MatIconModule} from '@angular/material/icon'
+import {MatIcon, MatIconModule} from '@angular/material/icon';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import {MatIcon, MatIconModule} from '@angular/material/icon'
     ReactiveFormsModule,
     MatSnackBarModule,
     MatRippleModule,
-    MatIconModule
+    MatIconModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
