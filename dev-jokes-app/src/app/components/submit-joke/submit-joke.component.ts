@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormBuilder, FormGroup, Validators} from '@angular/forms';
-import { MatSpinner } from '@angular/material/progress-spinner';
-import { BehaviorSubject } from 'rxjs';
+import { FormBuilder, FormGroup, Validators} from '@angular/forms';
 import { DevJokesService } from 'src/app/services/dev-jokes.service';
 
 @Component({
@@ -16,6 +14,7 @@ export class SubmitJokeComponent implements OnInit {
   constructor(private fb: FormBuilder, private devJokesService:DevJokesService) { }
 
   ngOnInit(): void {
+    //Initializing form values and validators
     this.jokeForm = this.fb.group({
       name:[''],
       twitter:[''],
@@ -26,9 +25,10 @@ export class SubmitJokeComponent implements OnInit {
 
   submitJoke(jokeForm:FormGroup) {
     this.jokeFormResult = JSON.stringify(this.jokeForm.value);
-    console.log(this.jokeFormResult);
+    //Display spinner
     const spinner = document.getElementById('spinner_container') as HTMLInputElement;
     spinner.style.display='block';
+    //Calls submission function in service
     this.devJokesService.submitDevJoke(this.jokeFormResult, this.jokeForm);
   }
 }

@@ -16,14 +16,6 @@ describe('DevJokesService', () => {
     service = TestBed.inject(DevJokesService);
   });
 
-  // beforeAll(function() {
-  //   jasmine.DEFAULT_TIMEOUT_INTERVAL = 999999;
-  // });
-
-  // it('should have custom timeout', function(){
-  //   console.log(jasmine.DEFAULT_TIMEOUT_INTERVAL); //prints 999999
-  // });
-
   it('should be created', () => {
     expect(service).toBeTruthy();
   });

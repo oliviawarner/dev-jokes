@@ -9,9 +9,7 @@ import { DevJokesService } from 'src/app/services/dev-jokes.service';
 })
 export class ViewJokeComponent implements OnInit, OnDestroy {
 
-  constructor(
-    private devJokesService:DevJokesService
-  ) {}
+  constructor(private devJokesService:DevJokesService) {}
 
   jokeSub$: Subscription = new Subscription;
 
@@ -21,9 +19,10 @@ export class ViewJokeComponent implements OnInit, OnDestroy {
 
   showProgressBar:boolean=false;
 
-
   getJoke() {
     this.showProgressBar = true;
+
+    //Receives joke data from service
     this.jokeSub$ = this.devJokesService.getDevJoke().subscribe(
       (data) => {
         this.joke = data;
