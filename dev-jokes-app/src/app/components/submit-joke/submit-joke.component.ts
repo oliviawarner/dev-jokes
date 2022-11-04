@@ -25,6 +25,6 @@ export class SubmitJokeComponent implements OnInit {
   submitJoke(jokeForm:FormGroup) {
     this.jokeFormResult = JSON.stringify(this.jokeForm.value);
     console.log(this.jokeFormResult);
-    this.devJokesService.submitDevJoke(this.jokeFormResult);
+    this.devJokesService.submitDevJoke(this.jokeFormResult, this.jokeForm);
   }
 }
