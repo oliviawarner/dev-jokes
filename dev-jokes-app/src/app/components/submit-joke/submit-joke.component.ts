@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormBuilder, FormGroup, Validators} from '@angular/forms';
+import { MatSpinner } from '@angular/material/progress-spinner';
+import { BehaviorSubject } from 'rxjs';
 import { DevJokesService } from 'src/app/services/dev-jokes.service';
 
 @Component({
@@ -25,6 +27,8 @@ export class SubmitJokeComponent implements OnInit {
   submitJoke(jokeForm:FormGroup) {
     this.jokeFormResult = JSON.stringify(this.jokeForm.value);
     console.log(this.jokeFormResult);
+    const spinner = document.getElementById('spinner_container') as HTMLInputElement;
+    spinner.style.display='block';
     this.devJokesService.submitDevJoke(this.jokeFormResult, this.jokeForm);
   }
 }

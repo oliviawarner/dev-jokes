@@ -25,6 +25,8 @@ export class DevJokesService {
         this._snackBar.open('Joke has been submitted', 'Close', {
           duration:5000
         });
+        const spinner = document.getElementById('spinner_container') as HTMLInputElement;
+        spinner.style.display='none';
         jokeForm.reset();
         Object.keys(jokeForm.controls).forEach(key => {
           jokeForm.get(key)?.setErrors(null) ;

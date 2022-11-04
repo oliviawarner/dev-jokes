@@ -37,6 +37,7 @@
 
 #spinner_container {
   padding-top:50px;
+  display:none;
 }
 
 #spinner {
