@@ -1,7 +1,7 @@
 # Dev Jokes
 
 ## 06/24 Update:
-- Dev Jokes API used looks to be unusable/deprecated.
+- Dev Jokes API used looks to be unstable or deprecated.
 
 ## App Description:
 ##### Allows you to populate or submit developer jokes with the [Dev Jokes API](https://documenter.getpostman.com/view/16443297/TzkyLee7).
